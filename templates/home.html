@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo List</title>
+</head>
+<body>
+<h1>Todo List</h1>
+<ul>
+    {% for todo in todos %}
+        <li>
+        <a href="{{ todo.id }}">
+            {{ todo.text }} (expires at {{ todo.expires_at }})
+
+        </a>
+        </li>
+    {% empty %}
+        <li>No todos yet.</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
